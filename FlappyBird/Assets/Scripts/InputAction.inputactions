@@ -6,7 +6,7 @@
             "id": "cbd9b6b6-5047-4cf0-88b7-fb131d7a6d1a",
             "actions": [
                 {
-                    "name": "Binds",
+                    "name": "Touch",
                     "type": "Button",
                     "id": "2c0f46f3-8cc8-4fbf-b2d1-08c6e4f9a61d",
                     "expectedControlType": "Button",
@@ -23,7 +23,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "PC",
-                    "action": "Binds",
+                    "action": "Touch",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -34,7 +34,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "Mobile",
-                    "action": "Binds",
+                    "action": "Touch",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
