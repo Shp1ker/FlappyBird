@@ -136,7 +136,6 @@ GameObject:
   - component: {fileID: 32361635}
   - component: {fileID: 32361634}
   - component: {fileID: 32361639}
-  - component: {fileID: 32361640}
   - component: {fileID: 32361641}
   m_Layer: 0
   m_Name: Bird
@@ -223,7 +222,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 737249487, guid: be9c3de438ee75c41a7d5193078590c7, type: 3}
+  m_Sprite: {fileID: -7226384896532200884, guid: be9c3de438ee75c41a7d5193078590c7, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -242,9 +241,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 32361633}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.56, y: 0.82, z: 0}
+  m_LocalPosition: {x: -6, y: 1, z: 0}
   m_LocalScale: {x: 2.5, y: 2.5, z: 1}
-  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 1
@@ -276,7 +274,7 @@ MonoBehaviour:
   m_ActionEvents:
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 32361640}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: BirdMover, Assembly-CSharp
         m_MethodName: 
         m_Mode: 1
@@ -295,19 +293,6 @@ MonoBehaviour:
   m_DefaultActionMap: ActionMap1
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 519420031}
---- !u!114 &32361640
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 32361633}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a71eb1c567c27184ca10b00e419bde62, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _birdMover: {fileID: 32361641}
 --- !u!114 &32361641
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -321,7 +306,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _rigidbody2D: {fileID: 32361635}
+  _speed: 2
   _hightJump: 2
+  _minAngle: -45
+  _maxAngle: 45
+  _speedRotation: 2
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -401,8 +390,51 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1727983266
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1727983268}
+  - component: {fileID: 1727983267}
+  m_Layer: 0
+  m_Name: InputHandler
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1727983267
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1727983266}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a71eb1c567c27184ca10b00e419bde62, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _birdMover: {fileID: 32361641}
+--- !u!4 &1727983268
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1727983266}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.2304782, y: -0.21142754, z: -1.219161}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
