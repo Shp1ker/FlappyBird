@@ -222,7 +222,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BackGround
+      name: BackGroundNight
       rect:
         serializedVersion: 2
         x: 292
@@ -411,7 +411,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: atlas_18
+      name: Ground
       rect:
         serializedVersion: 2
         x: 584
@@ -432,11 +432,11 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GoldMoney
+      name: GoldCoin
       rect:
         serializedVersion: 2
-        x: 242
-        y: 416
+        x: 224
+        y: 26
         width: 44
         height: 44
       alignment: 0
@@ -704,6 +704,48 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: BackGroundDay
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 512
+        width: 288
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 19, z: 0, w: 20}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 43b29f97bb581c547aa3632f4db3f100
+      internalID: -476203792
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SilverCoin
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 74
+        width: 44
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb58d3064db916f4da22f7bcf6cb8f87
+      internalID: -2010400651
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -723,24 +765,26 @@ TextureImporter:
       OkButton: 1659181713
       One: -397026878
       BirdState: 737249487
+      BackGroundDay: -476203792
       BirdUp: 623034578
       MenuButton: -538384684
       Three: 1742086384
       ScoreTable: 960673180
       Five: 1999604899
+      SilverCoin: -2010400651
       GameOver: 1352624765
       ScoreButton: -1758375810
       Nine: 804476688
       Eight: -1868868389
       BirdDown: -390942258
       Seven: -72124188
+      BackGroundNight: 110720840
       Six: 2136179702
-      BackGround: 110720840
+      GoldCoin: 1235585458
       Four: -1788387756
       atlas_22: 623034578
+      Ground: -515401900
       StartButton: -1535062574
-      atlas_18: 1098153602
-      GoldMoney: 1235585458
       Pipe: -1746496295
       GetReady: -1532185926
   spritePackingTag: 

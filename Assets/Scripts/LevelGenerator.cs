@@ -7,11 +7,16 @@ public class LevelGenerator : MonoBehaviour
     [SerializeField] private GameObject _template;
     private void Start()
     {
-        Spawn();
+        int x = 2;
+        for (int i = 0; i < 10; ++i)
+        {
+            Spawn(ref x);
+        }
     }
-    private void Spawn()
+    private void Spawn(ref int x)
     {
         Pipes temp = Instantiate(_template).GetComponent<Pipes>();
-        temp.Init(new Vector3(2, 0, 0));
+        temp.Init(new Vector3(x, 0, 0));
+        x += 2;
     }
 }

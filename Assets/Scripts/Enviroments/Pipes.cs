@@ -20,6 +20,6 @@ public class Pipes : MonoBehaviour
         downHeight = _downPipeTransform.gameObject.GetComponent<BoxCollider2D>().size.y;
 
         _topPipeTransform.position = startPosition + new Vector3(0, _height / 2 + topHeight / 2, 0);
-        _downPipeTransform.position = startPosition + new Vector3(0, _height / 2 + downHeight / 2, 0);
+        _downPipeTransform.position = startPosition - new Vector3(0, _height / 2 + downHeight / 2, 0);
     }
 }
