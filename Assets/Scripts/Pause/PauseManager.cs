@@ -3,6 +3,7 @@ using UnityEngine;
 public class PauseManager : MonoBehaviour
 {
     public GameObject Panel;
+    public GameObject GameOverPanel;
     public void OpenPanel()
     {
         if (Time.timeScale == 1)
@@ -10,7 +11,7 @@ public class PauseManager : MonoBehaviour
             Pause();
             Panel.SetActive(true);
         }
-        else
+        else if (GameOverPanel.activeSelf == false)
         {
             Continue();
             Panel.SetActive(false);
