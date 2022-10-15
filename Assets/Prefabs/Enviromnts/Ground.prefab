@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 2261891419387369391}
   - component: {fileID: 3652214473623541263}
   - component: {fileID: 2805585842884391400}
-  - component: {fileID: 6284585626566610643}
+  - component: {fileID: -2316887857808057050}
   m_Layer: 0
   m_Name: Ground
   m_TagString: Untagged
@@ -112,7 +112,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 3.36, y: 1.12}
   m_EdgeRadius: 0
---- !u!114 &6284585626566610643
+--- !u!114 &-2316887857808057050
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -124,3 +124,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cc7efa99962321e4688c67bd89b548dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _birdTransform: {fileID: 0}
+  _GroundOffset: {x: 0, y: 0, z: 0}

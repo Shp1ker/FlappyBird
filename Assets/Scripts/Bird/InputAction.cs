@@ -35,6 +35,15 @@ public partial class @InputScheme : IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Pause"",
+                    ""type"": ""Button"",
+                    ""id"": ""3a20bdf0-6594-4ec7-b5fc-8e2e0ec8aad6"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -57,6 +66,17 @@ public partial class @InputScheme : IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""groups"": ""Mobile"",
                     ""action"": ""Touch"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""0ce78af8-6807-42a6-a617-08aaad4069f5"",
+                    ""path"": """",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Pause"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -91,6 +111,7 @@ public partial class @InputScheme : IInputActionCollection2, IDisposable
         // ActionMap1
         m_ActionMap1 = asset.FindActionMap("ActionMap1", throwIfNotFound: true);
         m_ActionMap1_Touch = m_ActionMap1.FindAction("Touch", throwIfNotFound: true);
+        m_ActionMap1_Pause = m_ActionMap1.FindAction("Pause", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -151,11 +172,13 @@ public partial class @InputScheme : IInputActionCollection2, IDisposable
     private readonly InputActionMap m_ActionMap1;
     private IActionMap1Actions m_ActionMap1ActionsCallbackInterface;
     private readonly InputAction m_ActionMap1_Touch;
+    private readonly InputAction m_ActionMap1_Pause;
     public struct ActionMap1Actions
     {
         private @InputScheme m_Wrapper;
         public ActionMap1Actions(@InputScheme wrapper) { m_Wrapper = wrapper; }
         public InputAction @Touch => m_Wrapper.m_ActionMap1_Touch;
+        public InputAction @Pause => m_Wrapper.m_ActionMap1_Pause;
         public InputActionMap Get() { return m_Wrapper.m_ActionMap1; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -168,6 +191,9 @@ public partial class @InputScheme : IInputActionCollection2, IDisposable
                 @Touch.started -= m_Wrapper.m_ActionMap1ActionsCallbackInterface.OnTouch;
                 @Touch.performed -= m_Wrapper.m_ActionMap1ActionsCallbackInterface.OnTouch;
                 @Touch.canceled -= m_Wrapper.m_ActionMap1ActionsCallbackInterface.OnTouch;
+                @Pause.started -= m_Wrapper.m_ActionMap1ActionsCallbackInterface.OnPause;
+                @Pause.performed -= m_Wrapper.m_ActionMap1ActionsCallbackInterface.OnPause;
+                @Pause.canceled -= m_Wrapper.m_ActionMap1ActionsCallbackInterface.OnPause;
             }
             m_Wrapper.m_ActionMap1ActionsCallbackInterface = instance;
             if (instance != null)
@@ -175,6 +201,9 @@ public partial class @InputScheme : IInputActionCollection2, IDisposable
                 @Touch.started += instance.OnTouch;
                 @Touch.performed += instance.OnTouch;
                 @Touch.canceled += instance.OnTouch;
+                @Pause.started += instance.OnPause;
+                @Pause.performed += instance.OnPause;
+                @Pause.canceled += instance.OnPause;
             }
         }
     }
@@ -200,5 +229,6 @@ public partial class @InputScheme : IInputActionCollection2, IDisposable
     public interface IActionMap1Actions
     {
         void OnTouch(InputAction.CallbackContext context);
+        void OnPause(InputAction.CallbackContext context);
     }
 }

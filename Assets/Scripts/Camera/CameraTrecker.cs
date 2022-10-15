@@ -15,6 +15,11 @@ public class CameraTrecker : MonoBehaviour
 
     private void LateUpdate()
     {
-        transform.position = _birdTransform.position + _cameraOffset;
+        _cameraOffset = _birdTransform.transform.position;
+        _cameraOffset.y = transform.position.y;
+        _cameraOffset.z = transform.position.z;
+        transform.position = _cameraOffset;
+
+        //transform.position = _birdTransform.position + _cameraOffset;
     }
 }
