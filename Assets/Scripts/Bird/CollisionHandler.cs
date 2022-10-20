@@ -4,25 +4,26 @@ using UnityEngine.Events;
 [RequireComponent(typeof(BirdMover))]
 public class CollisionHandler : MonoBehaviour
 {
-    public GameObject Panel;
+    [SerializeField] private GameObject Panel;
     [SerializeField] private UnityEvent _achivment;
+    [SerializeField] private UnityEvent _hit;
     private BirdMover _birdMover;
 
     private void Awake()
     {
         _birdMover = GetComponent<BirdMover>();
     }
-    void OnCollisionEnter2D(Collision2D other)
+    private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.TryGetComponent(out Gates gate))
+        if (other.TryGetComponent(out Gates gate))
         {
             _achivment.Invoke();
         }
-        if (other.gameObject.TryGetComponent(out Pipes Pipe))
+        if (other.TryGetComponent(out Ground ground))
         {
-            _birdMover.Stop();
+            _hit.Invoke();
+            Time.timeScale = 0;
             Panel.SetActive(true);
-            _achivment.Invoke();
         }
     }
 }

@@ -1,17 +1,18 @@
-using System.Collections;
+using UnityEngine.Events;
 using UnityEngine;
 
 public class BirdMover : MonoBehaviour
 {
+    public static float CoefficientX = 0.4f;
     [SerializeField] private Rigidbody2D _rigidbody2D;
+    [SerializeField] private UnityEvent _jump;
     [SerializeField] private float _speed = 2;
     [SerializeField] private float _hightJump = 2;
     [SerializeField] private float _minAngle = -45f;
     [SerializeField] private float _maxAngle = 45f;
     [SerializeField] private float _speedRotation = 2f;
-    [SerializeField] private float _maxHeight;
+    [SerializeField] private float _maxHeight = 2.35f;
     [SerializeField] Vector3 _startPosition = Vector3.zero;
-    private IEnumerator _RotatationEn;
     public void Jump()
     {
         if (transform.position.y > _maxHeight)
@@ -27,7 +28,7 @@ public class BirdMover : MonoBehaviour
 
     private void Awake()
     {
-        _rigidbody2D.velocity = new Vector2(_speed, 0);
+        Start();
     }
     private void Update()
     {
@@ -36,6 +37,10 @@ public class BirdMover : MonoBehaviour
 
     private void Rotate()
     {
+        if (Time.timeScale > 0)
+        {
+            _jump.Invoke();
+        }
         _rigidbody2D.rotation = _minAngle;
     }
     public void Start()
@@ -50,31 +55,5 @@ public class BirdMover : MonoBehaviour
         transform.position = _startPosition;
         _rigidbody2D.isKinematic = true;
     }
-
-    /*
-    private void Rotate()
-    {
-        int minAngle = -45;
-        int maxAngle = 45;
-        if (_RotatationEn != null)
-        {
-            StopCoroutine(_RotatationEn);
-        }
-        _RotatationEn = RotateBird(minAngle, maxAngle);
-        StartCoroutine(_RotatationEn);
-    }
-
-    private IEnumerator RotateBird(int minAngle, int maxAngle)
-    {
-        float timeAnimation = 1f;
-        float timeOnFrame = timeAnimation / (maxAngle - minAngle);
-        WaitForSeconds wait = new WaitForSeconds(timeOnFrame);
-        for (int i = minAngle; i < maxAngle; i++)
-        {
-            _rigidbody2D.rotation = (float)i;
-            yield return wait;
-        }
-    }
-*/
 }
     
