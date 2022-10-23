@@ -3,6 +3,7 @@ using UnityEngine.SceneManagement;
 
 public class PauseManager : MonoBehaviour
 {
+    public GameObject Bird;
     public GameObject Panel;
     public GameObject GameOverPanel;
     public GameObject ContinueButton;
@@ -38,10 +39,6 @@ public class PauseManager : MonoBehaviour
     public void Continue()
     {
         Time.timeScale = 1;
-        if (ContinueButton.activeSelf == true)
-        {
-            ContinueButton.SetActive(false);
-        }
     }
     public void Menu()
     {
@@ -49,7 +46,8 @@ public class PauseManager : MonoBehaviour
     }
     public void Restart()
     {
+        Sprite spr = Bird.GetComponent<SpriteRenderer>().sprite;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-        ContinueButton.SetActive(true);
+        Bird.GetComponent<SpriteRenderer>().sprite = spr;
     }
 }

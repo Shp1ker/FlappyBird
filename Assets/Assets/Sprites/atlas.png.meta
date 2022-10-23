@@ -147,7 +147,7 @@ TextureImporter:
         height: 58
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
-      border: {x: 10, y: 11, z: 10, w: 10}
+      border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -168,7 +168,7 @@ TextureImporter:
         height: 58
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
-      border: {x: 12, y: 11, z: 11, w: 10}
+      border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -204,13 +204,13 @@ TextureImporter:
       name: ScoreTable
       rect:
         serializedVersion: 2
-        x: 6
+        x: 5
         y: 393
-        width: 226
+        width: 227
         height: 114
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
-      border: {x: 13, y: 13, z: 12, w: 12}
+      border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -453,7 +453,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BirdUp
+      name: RedBird
       rect:
         serializedVersion: 2
         x: 230
@@ -713,7 +713,7 @@ TextureImporter:
         width: 288
         height: 512
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 19, z: 0, w: 20}
       outline: []
       physicsShape: []
@@ -734,7 +734,7 @@ TextureImporter:
         width: 44
         height: 44
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -742,6 +742,48 @@ TextureImporter:
       bones: []
       spriteID: bb58d3064db916f4da22f7bcf6cb8f87
       internalID: -2010400651
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlueBird
+      rect:
+        serializedVersion: 2
+        x: 174
+        y: 18
+        width: 34
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9cf37ba42c1681e4fa0fbc22b2a5a8e9
+      internalID: -1535354625
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: YellowBird
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 18
+        width: 34
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 14138c6cd0614c94fa9a764ad8780a38
+      internalID: -972873042
       vertices: []
       indices: 
       edges: []
@@ -766,7 +808,6 @@ TextureImporter:
       One: -397026878
       BirdState: 737249487
       BackGroundDay: -476203792
-      BirdUp: 623034578
       MenuButton: -538384684
       Three: 1742086384
       ScoreTable: 960673180
@@ -778,10 +819,13 @@ TextureImporter:
       Eight: -1868868389
       BirdDown: -390942258
       Seven: -72124188
+      RedBird: 623034578
       BackGroundNight: 110720840
       Six: 2136179702
       GoldCoin: 1235585458
+      YellowBird: -972873042
       Four: -1788387756
+      BlueBird: -1535354625
       atlas_22: 623034578
       Ground: -515401900
       StartButton: -1535062574
